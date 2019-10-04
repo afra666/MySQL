@@ -1,0 +1,51 @@
+#Windows MySQL常用命令：
+#0.下载
+  https://dev.mysql.com/downloads/mysql/8.0.html
+  文件名
+  Windows（x86，64位），ZIP存档	8.0.17	254.2M	
+  下载
+  （mysql-8.0.17-winx64.zip）	MD5：d120bb0513c2ccfaeee74b0e99217bb7| 签名
+
+
+#1.环境变量path添加bin目录：
+D:\Program Files\mysql-8.0.17-winx64\bin
+
+#2.进入MySQL命令行查询
+mysql -h localhost -u root -p
+
+
+#=======================================
+#Ubuntu 16
+
+#1.命令1
+sudo apt-get update
+#2.命令2
+sudo apt-get install mysql-server
+
+#安装中。。。
+
+#3.检查mysql服务状态，如果显示绿点则安装成功
+systemctl status mysql.service
+
+#4.进入MySQL命令行 
+sudo mysql -uroot -p
+
+#############################常用SQL语句###########################################
+#显示数据库
+show databases;
+
+#创建自己的数据库
+create database db001;
+
+#打开数据库-显示表-描述表user列信息-显示表内容
+use db001;
+show tables;
+describe user;
+select * from user;
+
+#刷新数据库
+flush privileges; 
+##################################################################################
+
+
+
